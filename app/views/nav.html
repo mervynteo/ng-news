@@ -30,5 +30,13 @@
                 <a href="#" ng-click="logout()">Logout</a>
             </li>
         </ul>
+        <ul class="nav navbar-nav navbar-right" ng-show="!signedIn()">
+            <li>
+                <a href="#/login">Log in</a>
+            </li>
+            <li>
+                <a href="#/register">Register</a>
+            </li>
+        </ul>
     </div>
 </nav>
