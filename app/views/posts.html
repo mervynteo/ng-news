@@ -12,9 +12,14 @@
                 </a>
             </div>
             <div>
+                <span>
+                    submitted by
+                    <a href="#/users/{{post.owner}}">{{post.owner}}</a>
+                </span>
                 <a href="#posts/{{postId}}">comments</a>
                 <button type="button" class="btn btn-default btn-sm"
-                        ng-click="deletePost(postId)">
+                        ng-click="deletePost(postId)" ng-show="signedIn() &&
+                        post.owner === currentUser.username">
                     <span class="glyphicon glyphicon-remove"></span> delete
                 </button>
             </div>
